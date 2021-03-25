@@ -1,5 +1,5 @@
 const nomePetshop = "PETSHOP DECOLA";
-
+var n_vacinados = 0;
 let pets = [{
     nome: 'Mike',
     tipo: 'Cachorro',
@@ -39,21 +39,43 @@ let pets = [{
 ];
 
 //function () {} vira () => {}
-
 const listarPets = () => {
     for(let pet of pets){
         console.log(`${pet.nome}, ${pet.idade}, ${pet.tipo}, ${pet.raca}`);
     }
 }
 
-const vacinarPet = () => {
+const vacinarPet = ( ) => {
     for(let pet of pets){
         if (pet.vacinado == false){
             pet.vacinado = true;
-            console.log(`${pet.nome} foi vacinado`);
-        } 
+            console.log(`${pet.nome} foi vacinado com sucesso`);
+        } else {
+            console.log(`Ops, ${pet.nome} já está vacinado`);
+        }
     }
 }
-vacinarPet();
+
+const campanhaVacina = () => {
+    for(let pet of pets){
+        if (pet.vacinado == false){
+            pet.vacinado = true;
+            n_vacinados++;
+    }  
+}
+if(n_vacinados == 1){
+    console.log(`${n_vacinados} foi vacinado`);
+} else {
+    console.log(`${n_vacinados} foram vacinados`);
+}
+}
+console.log('LISTA DE PETS');
 listarPets();
+console.log('');
+console.log('PETS VACINADOS');
+vacinarPet();
+console.log('');
+console.log('CAMPANHA DE VACINAÇÃO');
+campanhaVacina();
+console.log('');
 //console.log(pet);

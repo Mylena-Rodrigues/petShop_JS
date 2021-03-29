@@ -4,7 +4,7 @@ let bancoDados = fs.readFileSync('./dadosPet.json');
 bancoDados = JSON.parse(bancoDados);
 
 const atualizarBanco = () => {
-    let petsAtualizado = JSON.stringify(bancoDados);
+    let petsAtualizado = JSON.stringify(bancoDeDados, null, 2)
 
     fs.writeFileSync('dadosPet.json', petsAtualizado, 'utf-8');
 }
@@ -90,7 +90,7 @@ const apararUnhasPet = (pet) => {
 };
 
 const atenderCliente = (pet, servico) => {
-    console.log(`Olá, ${pet.nome}`);
+    console.log(`Olá, bem-vindo, ${pet.nome}`);
     servico ? servico(pet) : console.log("Só vim dar uma olhadinha");
     //servico(pet);
     console.log(`Tchau, até mais!`);

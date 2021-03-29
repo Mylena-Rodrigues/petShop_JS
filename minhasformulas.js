@@ -127,8 +127,8 @@ const apararUnhasPet = pet => {
 
 const atenderCliente = (pet, servico) => {
     console.log(`Olá, ${pet.nome}`);
-    //servico ? servico() : console.log("Só vim dar uma olhadinha");
-    servico(pet);
+    servico ? servico() : console.log("Só vim dar uma olhadinha");
+    //servico(pet);
     console.log(`Tchau, até mais!`);
 }
 

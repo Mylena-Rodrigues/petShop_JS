@@ -75,6 +75,12 @@ if(n_vacinados == 1){
     console.log(`${n_vacinados} foram vacinados`);
 }
 }
+/*for (let pet of bancoDados.pets) {
+        if (!pet.vacinado) {
+            vacinarPet(pet);
+            petVacinadosCampanha++;
+        }
+    }*/
 /*const darBanhoPet = () => {
     for(let pet of pets){
             if((!(pet.servicos.includes('banho')))||(pet.servicos.length==0)){
